@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style type="text/css">
+      table {
+          border-collapse: collapse;
+          width: 100%;
+      }
+
+      table, th, td {
+          border: 1px solid #aaa;
+          padding: 5px;
+      }
+      table td {
+        width: 50%;
+      }
+
+      table td.valor {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr style="background-color: darkseagreen;">
+        <td colspan="2" style="text-align:center;vertical-align:middle;">Dados básicos</td>
+      </tr>
+      <tr>
+        <td>Nome para contato</td>
+        <td style="background-color: #eee;"><%= @quotation.contact_name %></td>
+      </tr>
+      <tr>
+        <td>E-mail para contato</td>
+        <td style="background-color: #eee;"><%= @quotation.contact_email %></td>
+      </tr>
+      <tr>
+        <td>Tipo de seguro</td>
+        <td style="background-color: #eee;"><%= @quotation.insurance_type.name %></td>
+      </tr>
+    </table>
+    <br>
+    <table>
+      <tr style="background-color: darkseagreen;">
+        <td colspan="2" style="text-align:center;vertical-align:middle;">Sobre o veículo</td>
+      </tr>
+      <tr>
+        <td>Marca</td>
+        <td style="background-color: #eee;"><%= @quotation.vehicle_model.vehicle_brand.brand %></td>
+      </tr>
+      <tr>
+        <td>Ano de fabricação</td>
+        <td style="background-color: #eee;"><%= @quotation.vehicle_model.year %></td>
+      </tr>
+      <tr>
+        <td>Ano do modelo</td>
+        <td style="background-color: #eee;"><%= @quotation.vehicle_model.year %></td>
+      </tr>
+      <tr>
+        <td>Modelo</td>
+        <td style="background-color: #eee;"><%= @quotation.vehicle_model.model %></td>
+      </tr>
+      <tr>
+        <td>Possui alarme?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_alarm %></td>
+      </tr>
+      <tr>
+        <td>Possui bloqueador de ignição?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_blocker_ignition %></td>
+      </tr>
+      <tr>
+        <td>Possui rastreador?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_tracker %></td>
+      </tr>
+      <tr>
+        <td>Veículo alienado/financiado?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.funded_alienated %></td>
+      </tr>
+      <tr>
+        <td>Veículo blindado?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_armor %></td>
+      </tr>
+      <tr>
+        <td>Possui kit Gás?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_gaskit %></td>
+      </tr>
+      <tr>
+        <td>O número do chassi é remarcado?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_chassis_remarked %></td>
+      </tr>
+    </table>
+    <br>
+    <table>
+      <tr style="background-color: darkseagreen;">
+        <td colspan="2" style="text-align:center;vertical-align:middle;">Uso do veículo</td>
+      </tr>
+      <tr>
+        <td>CEP onde o veículo passa a noite</td>
+        <td style="background-color: #eee;"><%= @quotation.cep_night %></td>
+      </tr>
+      <tr>
+        <td>Veículo fica em garagem na residência?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_house_park %></td>
+      </tr>
+      <tr>
+        <td>Garagem possui controle remoto ou porteiro?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_house_remote_control %></td>
+      </tr>
+      <tr>
+        <td>Utiliza o veículo para ir ao trabalho?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.use_go_work %></td>
+      </tr>
+      <tr>
+        <td>Veículo fica em garagem/estacionamento no trabalho?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_work_park %></td>
+      </tr>
+      <tr>
+        <td>Garagem possui controle remoto ou porteiro?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_work_remote_control %></td>
+      </tr>
+      <tr>
+        <td>Utiliza veículo para fins comerciais?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.use_commercial %></td>
+      </tr>
+      <tr>
+        <td>Utiliza o veículo para ir à escola/faculdade?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.use_go_study %></td>
+      </tr>
+      <tr>
+        <td>Veículo fica em garagem/estacionamento na faculdade?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_study_park %></td>
+      </tr>
+      <tr>
+        <td>Garagem possui controle remoto ou porteiro?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_study_remote_control %></td>
+      </tr>
+      <tr>
+        <td>Qual a média da quilometragem diária percorrida?</td>
+        <td style="background-color: #eee;"><%= @quotation.km_daily %></td>
+      </tr>
+    </table>
+    <br>
+    <table>
+      <tr style="background-color: darkseagreen;">
+        <td colspan="2" style="text-align:center;vertical-align:middle;">Condutor principal</td>
+      </tr>
+      <tr>
+        <td>Nome completo</td>
+        <td style="background-color: #eee;"><%= @quotation.driver_name %></td>
+      </tr>
+      <tr>
+        <td>CPF</td>
+        <td style="background-color: #eee;"><%= @quotation.driver_cpf %></td>
+      </tr>
+      <tr>
+        <td>Sexo</td>
+        <td style="background-color: #eee;"><%= @quotation.driver_gender %></td>
+      </tr>
+      <tr>
+        <td>Data de nascimento</td>
+        <td style="background-color: #eee;"><%= @quotation.driver_birth_date %></td>
+      </tr>
+      <tr>
+        <td>Estado civil</td>
+        <td style="background-color: #eee;"><%= @quotation.driver_marital_status %></td>
+      </tr>
+      <tr>
+        <td>Convive com pessoas entre 18 e 24 anos que irão utilizar o veículo?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_driver_dependent %></td>
+      </tr>
+      <tr>
+        <td>Há quantos anos possui carteira de habilitação?</td>
+        <td style="background-color: #eee;"><%= @quotation.enabling_time %></td>
+      </tr>
+      <tr>
+        <td>Possui outros veículos?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.has_other_vehicles %></td>
+      </tr>
+      <tr>
+        <td>Escolaridade</td>
+        <td style="background-color: #eee;"><%= @quotation.schooling %></td>
+      </tr>
+      <tr>
+        <td>Atividade profissional</td>
+        <td style="background-color: #eee;"><%= @quotation.professional_activity %></td>
+      </tr>
+      <tr>
+        <td>Foi roubado nos últimos 2 anos?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.was_stolen %></td>
+      </tr>
+      <tr>
+        <td>Condutor é também o segurado?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.driver_is_insured %></td>
+      </tr>
+      <tr>
+        <td>Condutor é o proprietário do veículo?</td>
+        <td style="background-color: #eee;"><%= human_boolean @quotation.driver_is_owner %></td>
+      </tr>
+    </table>
+    <br>
+
+    <table>
+      <tr style="background-color: darkseagreen;">
+        <td colspan="2" style="text-align:center;vertical-align:middle;">Segurado</td>
+      </tr>
+      <tr>
+        <td>Nome completo</td>
+        <td style="background-color: #eee;"><%= @quotation.insured_name %></td>
+      </tr>
+      <tr>
+        <td>CPF</td>
+        <td style="background-color: #eee;"><%= @quotation.insured_cpf %></td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td style="background-color: #eee;"><%= @quotation.insured_email %></td>
+      </tr>
+      <tr>
+        <td>Sexo</td>
+        <td style="background-color: #eee;"><%= @quotation.insured_gender %></td>
+      </tr>
+      <tr>
+        <td>Data de nascimento</td>
+        <td style="background-color: #eee;"><%= @quotation.insured_birth_date %></td>
+      </tr>
+      <tr>
+        <td>Estado civil</td>
+        <td style="background-color: #eee;"><%= @quotation.insured_marital_status %></td>
+      </tr>
+    </table>
+    <br>
+
+    <table>
+      <tr style="background-color: darkseagreen;">
+        <td colspan="2" style="text-align:center;vertical-align:middle;">Proprietário</td>
+      </tr>
+      <tr>
+        <td>Nome completo</td>
+        <td style="background-color: #eee;"><%= @quotation.owner_name %></td>
+      </tr>
+      <tr>
+        <td>CPF</td>
+        <td style="background-color: #eee;"><%= @quotation.owner_cpf %></td>
+      </tr>
+      <tr>
+        <td>E-mail</td>
+        <td style="background-color: #eee;"><%= @quotation.owner_email %></td>
+      </tr>
+      <tr>
+        <td>Sexo</td>
+        <td style="background-color: #eee;"><%= @quotation.owner_gender %></td>
+      </tr>
+      <tr>
+        <td>Data de nascimento</td>
+        <td style="background-color: #eee;"><%= @quotation.owner_birth_date %></td>
+      </tr>
+      <tr>
+        <td>Estado civil</td>
+        <td style="background-color: #eee;"><%= @quotation.owner_marital_status %></td>
+      </tr>
+    </table>
+  </body>
+</html>

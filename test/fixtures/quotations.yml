@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vehicle_model: one
+  has_alarm: false
+  has_blocker_ignition: false
+  has_tracker: false
+  funded_alienated: false
+  has_armor: false
+  has_gaskit: false
+  has_chassis_remarked: false
+  cep: 1
+  cep_night: 1
+  has_house_park: false
+  has_house_remote_control: false
+  use_go_work: false
+  has_work_park: false
+  has_work_remote_control: false
+  use_commercial: false
+  use_go_study: false
+  has_study_park: false
+  has_study_remote_control: false
+  km_daily: 1
+  number: 1
+  contact_name: MyString
+  contact_email: MyString
+  insurance_type: one
+
+two:
+  vehicle_model: two
+  has_alarm: false
+  has_blocker_ignition: false
+  has_tracker: false
+  funded_alienated: false
+  has_armor: false
+  has_gaskit: false
+  has_chassis_remarked: false
+  cep: 1
+  cep_night: 1
+  has_house_park: false
+  has_house_remote_control: false
+  use_go_work: false
+  has_work_park: false
+  has_work_remote_control: false
+  use_commercial: false
+  use_go_study: false
+  has_study_park: false
+  has_study_remote_control: false
+  km_daily: 1
+  number: 1
+  contact_name: MyString
+  contact_email: MyString
+  insurance_type: two

@@ -1,0 +1,92 @@
+<script type="text/javascript">
+  $( document ).ready(function() {
+    $('.cpf').mask('999.999.999-99', {reverse: true});
+    $('.date').mask('99/99/9999', {reverse: true});  
+  });
+
+
+</script>
+<div id="driver_info" class="content-section-b">
+
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row bs-wizard" style="border-bottom:0;">
+        
+        <div class="col-xs-2 bs-wizard-step complete">
+          <div class="text-center bs-wizard-stepnum">1</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Dados básicos</div>
+        </div>
+        
+        <div class="col-xs-2 bs-wizard-step complete"><!-- complete -->
+          <div class="text-center bs-wizard-stepnum">2</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Sobre o veículo</div>
+        </div>
+        
+        <div class="col-xs-2 bs-wizard-step complete"><!-- complete -->
+          <div class="text-center bs-wizard-stepnum">3</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Uso do veículo</div>
+        </div>
+        
+        <div class="col-xs-2 bs-wizard-step active"><!-- active -->
+          <div class="text-center bs-wizard-stepnum">4</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Condutor principal</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled"><!-- active -->
+          <div class="text-center bs-wizard-stepnum">5</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Segurado</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled"><!-- active -->
+          <div class="text-center bs-wizard-stepnum">6</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Proprietário</div>
+        </div>
+      </div>
+      <hr class="section-heading-spacer">
+      <div class="clearfix"></div>
+      <h2 class="section-heading">Condutor principal</h2>
+      <p class="bg-info">
+        O condutor principal é quem usa o veículo por ao menos 5 dias da semana. Se o veículo for dividido entre diversos condutores, o principal será o condutor mais jovem que usa o veículo por ao menos 2 dias da semana.
+      </p>
+    </div>
+      <%= simple_form_for(@quotation, url: wizard_path,  html: { class: 'form-horizontal' }) do |f| %>
+          <div class="col-md-8 col-md-offset-2">
+            <div class="well">
+              <%= f.input :driver_name %>
+              <%= f.input :driver_cpf, :as => :string, input_html: { class: :cpf } %>
+              <%= f.input :driver_gender, as: :radio_buttons, collection: [['Masculino', 'Masculino'] ,['Feminino', 'Feminino']] %>
+              <% unless f.object.driver_birth_date.nil? %>
+                <%= f.input :driver_birth_date, :as => :string, input_html: { class: :date, :value => localize(f.object.driver_birth_date, format: "%d/%m/%Y") } %>
+              <% else %>
+                <%= f.input :driver_birth_date, :as => :string, input_html: { class: :date } %>
+              <% end %>
+              <%= f.input :driver_marital_status, collection: [ "Solteiro", "Casado ou união estável", "Separado", "Divorciado", "Viúvo"] %>
+              <%= f.input :has_driver_dependent, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+              <%= f.input :enabling_time %>
+              <%= f.input :has_other_vehicles, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+              <%= f.input :schooling , collection: ["Pós-Graduação","Superior","Técnico","Médio (2º Grau)","Fundamental completo (1º Grau)","Fundamental ncompleto 1º Grau incompleto)"] %>
+              <%= f.input :professional_activity , collection: ["Selecione uma opção","Não trabalha","Advogado(a), Juiz(a) de Direito ou Promotor(a) de Justiça","Aposentado","tleta","Ator, Atriz ou Jornalista","Dentista","Engenheiro(a)/Arquiteto(a)","Estudante","Médico(a)","Militar o Exército/Marinha/Aeronáutica","Músico(a)","Policiais, Guardas-Civis Municipais ou Agentes de Trânsito","rofessor(a) (ensino básico, ensino fundamental, médio ou superior)","Professor(a) Educação Física ou ersonal rainer","Proprietário de Empresas/Negócios","Servidor Público/Funcionário Público","Venda/Representante omercial","Corretor de Seguro / Funcionário CLT Corretora","Outros","Não desejo informar"] %>
+              <%= f.input :was_stolen, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+              <%= f.input :driver_is_insured, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+              <%= f.input :driver_is_owner, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+            </div>
+            <div class="well col-xs-12">
+                <%= f.button :submit, t("buttons.continue"), :class => "btn btn-primary pull-right" %>
+            </div>
+          </div>
+      <% end %>
+    </div>    
+  </div>    
+</div>  

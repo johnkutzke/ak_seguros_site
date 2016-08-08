@@ -1,0 +1,53 @@
+<!-- Navigation -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".page-scroll").click(function(event) {
+            $(".navbar-collapse").collapse('hide');
+        });
+    });
+</script>
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to root_path, class: "navbar-brand topnav" do %>
+                <%= image_tag("logo2.png", :class => "img-responsive") %>
+            <% end %>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <%= link_to "Sobre", sobre_path %>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Produtos <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="page-scroll" href="#auto">Automóvel</a></li>
+                        <li><a class="page-scroll" href="#residencial">Residencial</a></li>
+                        <li><a class="page-scroll" href="#empresarial">Empresarial</a></li>
+                        <li><a class="page-scroll" href="#nautico">Náutico</a></li>
+                        <li><%= link_to "Outros", produtos_path %></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#seguradoras">Seguradoras</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contato</a>
+                </li>
+                <li>
+                    <%= link_to "Orçamento", new_quotation_path, class: "page-scroll" %>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

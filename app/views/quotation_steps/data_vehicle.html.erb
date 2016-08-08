@@ -1,0 +1,109 @@
+<script type="text/javascript">
+$( document ).ready(function() {
+  $("#quotation_brand").change(function(){
+    $( "#quotation_manufacturing_year" ).prop( "disabled", false );
+  });
+
+  $("#quotation_manufacturing_year").change(function(){
+    $( "#quotation_model_year" ).prop( "disabled", false );
+
+    var url = '/get_drop_down_options.json?year=' + $(this).val()
+    $("#quotation_model_year").empty();
+    $.get( url, function( data ) {
+      $('#quotation_model_year').append("<option value></option>");
+      $.each(data, function(i, item) {
+        $('#quotation_model_year').append($('<option>', { 
+          value: item,
+          text : item 
+        }));
+      });
+    })
+  });
+
+  $("#quotation_model_year").change(function(){
+    $( "#quotation_vehicle_model_name" ).prop( "disabled", false );
+    $( "#quotation_vehicle_model_name" ).attr("placeholder", "Ex.: Gol");
+    });
+  });
+
+</script>
+<div id="data_vehicle" class="content-section-b">
+
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row bs-wizard" style="border-bottom:0;">
+        
+        <div class="col-xs-2 bs-wizard-step complete">
+          <div class="text-center bs-wizard-stepnum">1</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Dados básicos</div>
+        </div>
+        
+        <div class="col-xs-2 bs-wizard-step active"><!-- complete -->
+          <div class="text-center bs-wizard-stepnum">2</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Sobre o veículo</div>
+        </div>
+        
+        <div class="col-xs-2 bs-wizard-step disabled"><!-- complete -->
+          <div class="text-center bs-wizard-stepnum">3</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Uso do veículo</div>
+        </div>
+        
+        <div class="col-xs-2 bs-wizard-step disabled"><!-- active -->
+          <div class="text-center bs-wizard-stepnum">4</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Condutor principal</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled"><!-- active -->
+          <div class="text-center bs-wizard-stepnum">5</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Segurado</div>
+        </div>
+
+        <div class="col-xs-2 bs-wizard-step disabled"><!-- active -->
+          <div class="text-center bs-wizard-stepnum">6</div>
+          <div class="progress"><div class="progress-bar"></div></div>
+          <a href="#" class="bs-wizard-dot"></a>
+          <div class="bs-wizard-info text-center">Proprietário</div>
+        </div>
+      </div>
+      <hr class="section-heading-spacer">
+      <div class="clearfix"></div>
+      <h2 class="section-heading">Sobre o veículo</h2>
+    </div>
+    <%= simple_form_for(@quotation, url: wizard_path,  html: { class: 'form-horizontal' }) do |f| %>
+      <div class="col-md-8 col-md-offset-2">
+        
+
+        <div class="well">
+          <%= f.input :brand, collection: VehicleBrand.order(:brand).map { |r| [r.brand.upcase,r.id] } %>
+          <%= f.input :manufacturing_year, disabled: true, collection: 1999..Date.today.year %>
+          <%= f.input :model_year, disabled: true, collection: 1999..Date.today.year %>
+
+          <%= f.input :vehicle_model_name, :url => autocomplete_vehicle_model_model_quotations_path, :id_element => '#quotation_vehicle_model_id', :as => :autocomplete, :fields => {:brand_id => '#quotation_brand', :model_year => '#quotation_model_year'}, disabled: true %>
+          <%= f.input :vehicle_model_id, as: :hidden %>
+        </div>
+        <div class="well">
+          <%= f.input :has_alarm, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+          <%= f.input :has_blocker_ignition, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+          <%= f.input :has_tracker, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+          <%= f.input :funded_alienated, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+          <%= f.input :has_armor, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+          <%= f.input :has_gaskit, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+          <%= f.input :has_chassis_remarked, as: :radio_buttons, :collection => [[t("buttons.sim"),true], [t("buttons.nao"),false]] %>
+        </div>
+        <div class="well col-xs-12">
+            <%= f.button :submit, t("buttons.continue"), :class => "btn btn-primary pull-right" %>
+        </div>
+      </div>  
+    <% end %>
+  </div>  
+</div>  
