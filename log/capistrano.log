@@ -1,0 +1,159 @@
+# Logfile created on 2016-08-23 16:09:55 -0300 by logger.rb/47272
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:09:55 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0f92a3de] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [0f92a3de] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:15:35 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [aaaa0f05] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [aaaa0f05] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:15:52 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [fefa6a52] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [fefa6a52] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:16:01 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a0cff2ff] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a0cff2ff] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:17:57 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [558b33df] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [558b33df] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:18:02 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d8b1b884] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [d8b1b884] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:18:05 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [00d90e13] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [00d90e13] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:18:09 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3ef2db59] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [3ef2db59] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:18:12 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e4274de5] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e4274de5] Command: [ -d ~/.rvm ]
+ DEBUG [e4274de5] Finished in 1.931 seconds with exit status 0 (successful).
+ DEBUG [c3f4f1fc] Running ~/.rvm/bin/rvm version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c3f4f1fc] Command: ~/.rvm/bin/rvm version
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:18:17 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0af8f29b] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [0af8f29b] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:18:23 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bf822660] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [bf822660] Command: [ -d ~/.rvm ]
+ DEBUG [bf822660] Finished in 1.663 seconds with exit status 0 (successful).
+ DEBUG [8c5b7b08] Running ~/.rvm/bin/rvm version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [8c5b7b08] Command: ~/.rvm/bin/rvm version
+ DEBUG [8c5b7b08] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [8c5b7b08] Finished in 2.099 seconds with exit status 0 (successful).
+ DEBUG [f9e1c83c] Running ~/.rvm/bin/rvm current as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [f9e1c83c] Command: ~/.rvm/bin/rvm current
+ DEBUG [f9e1c83c] 	ruby-2.1.1
+ DEBUG [f9e1c83c] Finished in 0.773 seconds with exit status 0 (successful).
+ DEBUG [aa0f037e] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [aa0f037e] Command: ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version
+ DEBUG [aa0f037e] 	Gemset 'ak-seguros-site' does not exist, 'rvm ruby-2.2.3 do rvm gemset create ak-seguros-site' first, or append '--create'.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:51:29 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6d004db4] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [6d004db4] Command: [ -d ~/.rvm ]
+ DEBUG [6d004db4] Finished in 1.977 seconds with exit status 0 (successful).
+ DEBUG [f646fbb0] Running ~/.rvm/bin/rvm version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [f646fbb0] Command: ~/.rvm/bin/rvm version
+ DEBUG [f646fbb0] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [f646fbb0] Finished in 2.462 seconds with exit status 0 (successful).
+ DEBUG [9bbb460c] Running ~/.rvm/bin/rvm current as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [9bbb460c] Command: ~/.rvm/bin/rvm current
+ DEBUG [9bbb460c] 	ruby-2.1.1
+ DEBUG [9bbb460c] Finished in 0.813 seconds with exit status 0 (successful).
+ DEBUG [e7436905] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e7436905] Command: ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version
+ DEBUG [e7436905] 	ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
+ DEBUG [e7436905] Finished in 1.254 seconds with exit status 0 (successful).
+  INFO [640ac991] Running /usr/bin/env mkdir -p /tmp as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [640ac991] Command: /usr/bin/env mkdir -p /tmp
+  INFO [640ac991] Finished in 0.410 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ak_seguros_site-production-alex.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ak_seguros_site-production-alex.sh 100.0%
+  INFO [93c3ef35] Running /usr/bin/env chmod 700 /tmp/git-ssh-ak_seguros_site-production-alex.sh as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [93c3ef35] Command: /usr/bin/env chmod 700 /tmp/git-ssh-ak_seguros_site-production-alex.sh
+  INFO [93c3ef35] Finished in 0.410 seconds with exit status 0 (successful).
+  INFO [748e1d07] Running /usr/bin/env git ls-remote --heads git@github.com:johnkutzke/ak_seguros_site.git as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [748e1d07] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git ls-remote --heads git@github.com:johnkutzke/ak_seguros_site.git )
+ DEBUG [748e1d07] 	Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+ DEBUG [748e1d07] 	2e45336f9a23da4c990a33037864cb18aaae0047	refs/heads/master
+  INFO [748e1d07] Finished in 1.369 seconds with exit status 0 (successful).
+  INFO [5b53dd08] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared /home/alex/deploy/ak_seguros_site/releases as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [5b53dd08] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared /home/alex/deploy/ak_seguros_site/releases
+  INFO [5b53dd08] Finished in 0.452 seconds with exit status 0 (successful).
+  INFO [3752c516] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/shared/public/assets as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [3752c516] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/shared/public/assets
+  INFO [3752c516] Finished in 0.385 seconds with exit status 0 (successful).
+  INFO [fca89839] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/config /home/alex/deploy/ak_seguros_site/shared/db as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [fca89839] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/config /home/alex/deploy/ak_seguros_site/shared/db
+  INFO [fca89839] Finished in 0.459 seconds with exit status 0 (successful).
+ DEBUG [3ec8f9ec] Running [ -f /home/alex/deploy/ak_seguros_site/shared/config/database.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [3ec8f9ec] Command: [ -f /home/alex/deploy/ak_seguros_site/shared/config/database.yml ]
+ DEBUG [3ec8f9ec] Finished in 0.363 seconds with exit status 1 (failed).
+ ERROR linked file /home/alex/deploy/ak_seguros_site/shared/config/database.yml does not exist on ak-seguros-site.kutzke.com.br
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-23 16:55:55 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9abcc8aa] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [9abcc8aa] Command: [ -d ~/.rvm ]
+ DEBUG [9abcc8aa] Finished in 2.736 seconds with exit status 0 (successful).
+ DEBUG [454022b9] Running ~/.rvm/bin/rvm version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [454022b9] Command: ~/.rvm/bin/rvm version
+ DEBUG [454022b9] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [454022b9] Finished in 2.792 seconds with exit status 0 (successful).
+ DEBUG [de109b74] Running ~/.rvm/bin/rvm current as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [de109b74] Command: ~/.rvm/bin/rvm current
+ DEBUG [de109b74] 	ruby-2.1.1
+ DEBUG [de109b74] Finished in 0.908 seconds with exit status 0 (successful).
+ DEBUG [03085e5f] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [03085e5f] Command: ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version
+ DEBUG [03085e5f] 	ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
+ DEBUG [03085e5f] Finished in 1.333 seconds with exit status 0 (successful).
+  INFO [816ec166] Running /usr/bin/env mkdir -p /tmp as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [816ec166] Command: /usr/bin/env mkdir -p /tmp
+  INFO [816ec166] Finished in 0.481 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ak_seguros_site-production-alex.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ak_seguros_site-production-alex.sh 100.0%
+  INFO [5f662e55] Running /usr/bin/env chmod 700 /tmp/git-ssh-ak_seguros_site-production-alex.sh as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [5f662e55] Command: /usr/bin/env chmod 700 /tmp/git-ssh-ak_seguros_site-production-alex.sh
+  INFO [5f662e55] Finished in 0.415 seconds with exit status 0 (successful).
+  INFO [9371a7f7] Running /usr/bin/env git ls-remote --heads git@github.com:johnkutzke/ak_seguros_site.git as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [9371a7f7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git ls-remote --heads git@github.com:johnkutzke/ak_seguros_site.git )
+ DEBUG [9371a7f7] 	Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+ DEBUG [9371a7f7] 	2e45336f9a23da4c990a33037864cb18aaae0047	refs/heads/master
+  INFO [9371a7f7] Finished in 1.448 seconds with exit status 0 (successful).
+  INFO [3af0a962] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared /home/alex/deploy/ak_seguros_site/releases as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [3af0a962] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared /home/alex/deploy/ak_seguros_site/releases
+  INFO [3af0a962] Finished in 0.609 seconds with exit status 0 (successful).
+  INFO [95564a57] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/shared/public/assets as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [95564a57] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/shared/public/assets
+  INFO [95564a57] Finished in 0.405 seconds with exit status 0 (successful).
+  INFO [1ea64cbe] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/config /home/alex/deploy/ak_seguros_site/shared/db as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [1ea64cbe] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/config /home/alex/deploy/ak_seguros_site/shared/db
+  INFO [1ea64cbe] Finished in 0.463 seconds with exit status 0 (successful).
+ DEBUG [a65ff3e5] Running [ -f /home/alex/deploy/ak_seguros_site/shared/config/database.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a65ff3e5] Command: [ -f /home/alex/deploy/ak_seguros_site/shared/config/database.yml ]
+ DEBUG [a65ff3e5] Finished in 0.378 seconds with exit status 1 (failed).
+ ERROR linked file /home/alex/deploy/ak_seguros_site/shared/config/database.yml does not exist on ak-seguros-site.kutzke.com.br
