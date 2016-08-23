@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160728173355) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
+    t.string   "integer"
     t.text     "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -102,33 +103,6 @@ ActiveRecord::Schema.define(version: 20160728173355) do
     t.index ["vehicle_model_id"], name: "index_quotations_on_vehicle_model_id", using: :btree
   end
 
-  create_table "quotes", force: :cascade do |t|
-    t.integer  "number"
-    t.string   "contact_name"
-    t.string   "contact_email"
-    t.integer  "insurance_type_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.index ["insurance_type_id"], name: "index_quotes_on_insurance_type_id", using: :btree
-  end
-
-  create_table "use_vehicle_quotes", force: :cascade do |t|
-    t.integer  "cep"
-    t.integer  "cep_night"
-    t.boolean  "has_house_park"
-    t.boolean  "has_house_remote_control"
-    t.boolean  "use_go_work"
-    t.boolean  "has_work_park"
-    t.boolean  "has_work_remote_control"
-    t.boolean  "use_commercial"
-    t.boolean  "use_go_study"
-    t.boolean  "has_study_park"
-    t.boolean  "has_study_remote_control"
-    t.integer  "km_daily"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-  end
-
   create_table "vehicle_brands", force: :cascade do |t|
     t.string   "brand"
     t.datetime "created_at", null: false
@@ -146,23 +120,7 @@ ActiveRecord::Schema.define(version: 20160728173355) do
     t.index ["vehicle_brand_id"], name: "index_vehicle_models_on_vehicle_brand_id", using: :btree
   end
 
-  create_table "vehicle_quotes", force: :cascade do |t|
-    t.integer  "vehicle_model_id"
-    t.boolean  "has_alarm"
-    t.boolean  "has_blocker_ignition"
-    t.boolean  "has_tracker"
-    t.boolean  "funded_alienated"
-    t.boolean  "has_armor"
-    t.boolean  "has_gaskit"
-    t.boolean  "has_chassis_remarked"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.index ["vehicle_model_id"], name: "index_vehicle_quotes_on_vehicle_model_id", using: :btree
-  end
-
   add_foreign_key "quotations", "insurance_types"
   add_foreign_key "quotations", "vehicle_models"
-  add_foreign_key "quotes", "insurance_types"
   add_foreign_key "vehicle_models", "vehicle_brands"
-  add_foreign_key "vehicle_quotes", "vehicle_models"
 end
