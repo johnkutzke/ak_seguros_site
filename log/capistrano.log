@@ -1618,3 +1618,439 @@ You have deleted from the Gemfile:
 /home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/ruby_executable_hooks:15:in `eval'
 /home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/ruby_executable_hooks:15:in `<main>'
  DEBUG [2ba0145f] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-01 10:31:48 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3bf66a7a] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [3bf66a7a] Command: [ -d ~/.rvm ]
+ DEBUG [3bf66a7a] Finished in 1.785 seconds with exit status 0 (successful).
+ DEBUG [106299a0] Running ~/.rvm/bin/rvm version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [106299a0] Command: ~/.rvm/bin/rvm version
+ DEBUG [106299a0] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [106299a0] Finished in 2.093 seconds with exit status 0 (successful).
+ DEBUG [18a730a9] Running ~/.rvm/bin/rvm current as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [18a730a9] Command: ~/.rvm/bin/rvm current
+ DEBUG [18a730a9] 	ruby-2.1.1
+ DEBUG [18a730a9] Finished in 0.687 seconds with exit status 0 (successful).
+ DEBUG [1feeb7f5] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [1feeb7f5] Command: ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version
+ DEBUG [1feeb7f5] 	ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
+ DEBUG [1feeb7f5] Finished in 1.165 seconds with exit status 0 (successful).
+  INFO [a0bf813f] Running /usr/bin/env mkdir -p /tmp as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a0bf813f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a0bf813f] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ak_seguros_site-production-alex.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ak_seguros_site-production-alex.sh 100.0%
+  INFO [aea8c591] Running /usr/bin/env chmod 700 /tmp/git-ssh-ak_seguros_site-production-alex.sh as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [aea8c591] Command: /usr/bin/env chmod 700 /tmp/git-ssh-ak_seguros_site-production-alex.sh
+  INFO [aea8c591] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO [5f8d44c0] Running /usr/bin/env git ls-remote --heads git@github.com:johnkutzke/ak_seguros_site.git as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [5f8d44c0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git ls-remote --heads git@github.com:johnkutzke/ak_seguros_site.git )
+ DEBUG [5f8d44c0] 	35919c3e36822f8e6685786227440b3a33db8b60	refs/heads/master
+  INFO [5f8d44c0] Finished in 0.913 seconds with exit status 0 (successful).
+  INFO [54907557] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared /home/alex/deploy/ak_seguros_site/releases as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [54907557] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared /home/alex/deploy/ak_seguros_site/releases
+  INFO [54907557] Finished in 0.289 seconds with exit status 0 (successful).
+  INFO [b6af9817] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/shared/public/assets as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [b6af9817] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/shared/public/assets
+  INFO [b6af9817] Finished in 0.273 seconds with exit status 0 (successful).
+  INFO [eff16ac4] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/config as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [eff16ac4] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/config
+  INFO [eff16ac4] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [20c5acfa] Running [ -f /home/alex/deploy/ak_seguros_site/shared/config/database.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [20c5acfa] Command: [ -f /home/alex/deploy/ak_seguros_site/shared/config/database.yml ]
+ DEBUG [20c5acfa] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [df361914] Running [ -f /home/alex/deploy/ak_seguros_site/shared/config/secrets.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [df361914] Command: [ -f /home/alex/deploy/ak_seguros_site/shared/config/secrets.yml ]
+ DEBUG [df361914] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [bb1bad79] Running [ -f /home/alex/deploy/ak_seguros_site/current/REVISION ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [bb1bad79] Command: [ -f /home/alex/deploy/ak_seguros_site/current/REVISION ]
+ DEBUG [bb1bad79] Finished in 0.268 seconds with exit status 1 (failed).
+ DEBUG [a33ae1e9] Running [ -f /home/alex/deploy/ak_seguros_site/repo/HEAD ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a33ae1e9] Command: [ -f /home/alex/deploy/ak_seguros_site/repo/HEAD ]
+ DEBUG [a33ae1e9] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/alex/deploy/ak_seguros_site/repo
+ DEBUG [63172367] Running if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [63172367] Command: if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi
+ DEBUG [63172367] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [bd6ef850] Running /usr/bin/env git remote update --prune as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [bd6ef850] Command: cd /home/alex/deploy/ak_seguros_site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bd6ef850] 	Fetching origin
+ DEBUG [bd6ef850] 	From github.com:johnkutzke/ak_seguros_site
+ DEBUG [bd6ef850] 	   6e9926a..35919c3  master     -> master
+  INFO [bd6ef850] Finished in 1.134 seconds with exit status 0 (successful).
+ DEBUG [058f2e99] Running if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [058f2e99] Command: if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi
+ DEBUG [058f2e99] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [539371c6] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133157 as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [539371c6] Command: cd /home/alex/deploy/ak_seguros_site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133157 )
+  INFO [539371c6] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [c2740b50] Running /usr/bin/env git archive master | tar -x -f - -C /home/alex/deploy/ak_seguros_site/releases/20160901133157 as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c2740b50] Command: cd /home/alex/deploy/ak_seguros_site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/alex/deploy/ak_seguros_site/releases/20160901133157 )
+  INFO [c2740b50] Finished in 1.406 seconds with exit status 0 (successful).
+ DEBUG [a7998615] Running if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a7998615] Command: if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi
+ DEBUG [a7998615] Finished in 0.267 seconds with exit status 0 (successful).
+ DEBUG [afcd5927] Running /usr/bin/env git rev-list --max-count=1 master as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [afcd5927] Command: cd /home/alex/deploy/ak_seguros_site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [afcd5927] 	35919c3e36822f8e6685786227440b3a33db8b60
+ DEBUG [afcd5927] Finished in 0.273 seconds with exit status 0 (successful).
+ DEBUG [7d0cda85] Running if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133157; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133157'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [7d0cda85] Command: if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133157; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133157'" 1>&2; false; fi
+ DEBUG [7d0cda85] Finished in 0.273 seconds with exit status 0 (successful).
+  INFO [2014af99] Running /usr/bin/env echo "35919c3e36822f8e6685786227440b3a33db8b60" >> REVISION as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [2014af99] Command: cd /home/alex/deploy/ak_seguros_site/releases/20160901133157 && /usr/bin/env echo "35919c3e36822f8e6685786227440b3a33db8b60" >> REVISION
+  INFO [2014af99] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO [42c399e1] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133157/config as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [42c399e1] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133157/config
+  INFO [42c399e1] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [f079a5ef] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/database.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [f079a5ef] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/database.yml ]
+ DEBUG [f079a5ef] Finished in 0.265 seconds with exit status 1 (failed).
+ DEBUG [c01acfe4] Running [ -f /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/database.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c01acfe4] Command: [ -f /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/database.yml ]
+ DEBUG [c01acfe4] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [a6c971d8] Running /usr/bin/env rm /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/database.yml as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a6c971d8] Command: /usr/bin/env rm /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/database.yml
+  INFO [a6c971d8] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [4bdcdc2d] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/config/database.yml /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/database.yml as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [4bdcdc2d] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/config/database.yml /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/database.yml
+  INFO [4bdcdc2d] Finished in 0.280 seconds with exit status 0 (successful).
+ DEBUG [19fa94e7] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/secrets.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [19fa94e7] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/secrets.yml ]
+ DEBUG [19fa94e7] Finished in 0.269 seconds with exit status 1 (failed).
+ DEBUG [c5eaecbb] Running [ -f /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/secrets.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c5eaecbb] Command: [ -f /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/secrets.yml ]
+ DEBUG [c5eaecbb] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [a49dacb2] Running /usr/bin/env rm /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/secrets.yml as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a49dacb2] Command: /usr/bin/env rm /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/secrets.yml
+  INFO [a49dacb2] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [b2d2ef7f] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/config/secrets.yml /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/secrets.yml as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [b2d2ef7f] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/config/secrets.yml /home/alex/deploy/ak_seguros_site/releases/20160901133157/config/secrets.yml
+  INFO [b2d2ef7f] Finished in 0.271 seconds with exit status 0 (successful).
+  INFO [dd80e539] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133157 /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp /home/alex/deploy/ak_seguros_site/releases/20160901133157/public as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [dd80e539] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133157 /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp /home/alex/deploy/ak_seguros_site/releases/20160901133157/public
+  INFO [dd80e539] Finished in 0.271 seconds with exit status 0 (successful).
+ DEBUG [e699dff6] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/log ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e699dff6] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/log ]
+ DEBUG [e699dff6] Finished in 0.266 seconds with exit status 1 (failed).
+ DEBUG [a22b8dba] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/log ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a22b8dba] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/log ]
+ DEBUG [a22b8dba] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [84393632] Running /usr/bin/env rm -rf /home/alex/deploy/ak_seguros_site/releases/20160901133157/log as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [84393632] Command: /usr/bin/env rm -rf /home/alex/deploy/ak_seguros_site/releases/20160901133157/log
+  INFO [84393632] Finished in 0.292 seconds with exit status 0 (successful).
+  INFO [d953f0fe] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/releases/20160901133157/log as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [d953f0fe] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/releases/20160901133157/log
+  INFO [d953f0fe] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [d95038f5] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/pids ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [d95038f5] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/pids ]
+ DEBUG [d95038f5] Finished in 0.268 seconds with exit status 1 (failed).
+ DEBUG [36b57aeb] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/pids ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [36b57aeb] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/pids ]
+ DEBUG [36b57aeb] Finished in 0.268 seconds with exit status 1 (failed).
+  INFO [c2603fad] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/pids as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c2603fad] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/pids
+  INFO [c2603fad] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [f5c9e8d4] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/cache ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [f5c9e8d4] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/cache ]
+ DEBUG [f5c9e8d4] Finished in 0.268 seconds with exit status 1 (failed).
+ DEBUG [7b31c588] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/cache ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [7b31c588] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/cache ]
+ DEBUG [7b31c588] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [dd36f38a] Running /usr/bin/env rm -rf /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/cache as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [dd36f38a] Command: /usr/bin/env rm -rf /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/cache
+  INFO [dd36f38a] Finished in 0.505 seconds with exit status 0 (successful).
+  INFO [db82101d] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/cache as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [db82101d] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/cache
+  INFO [db82101d] Finished in 0.271 seconds with exit status 0 (successful).
+ DEBUG [18301d3f] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/sockets ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [18301d3f] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/sockets ]
+ DEBUG [18301d3f] Finished in 0.269 seconds with exit status 1 (failed).
+ DEBUG [46231588] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/sockets ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [46231588] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/sockets ]
+ DEBUG [46231588] Finished in 0.264 seconds with exit status 1 (failed).
+  INFO [17fef95a] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/sockets as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [17fef95a] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/releases/20160901133157/tmp/sockets
+  INFO [17fef95a] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [2d535b9c] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/system ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [2d535b9c] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/system ]
+ DEBUG [2d535b9c] Finished in 0.264 seconds with exit status 1 (failed).
+ DEBUG [0a7ce640] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/system ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [0a7ce640] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/system ]
+ DEBUG [0a7ce640] Finished in 0.266 seconds with exit status 1 (failed).
+  INFO [c5ed31e5] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/system as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c5ed31e5] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/system
+  INFO [c5ed31e5] Finished in 0.266 seconds with exit status 0 (successful).
+ DEBUG [2533441f] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/assets ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [2533441f] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/assets ]
+ DEBUG [2533441f] Finished in 0.267 seconds with exit status 1 (failed).
+ DEBUG [0f68a10d] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/assets ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [0f68a10d] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/assets ]
+ DEBUG [0f68a10d] Finished in 0.267 seconds with exit status 1 (failed).
+  INFO [e5822110] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/public/assets /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/assets as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e5822110] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/public/assets /home/alex/deploy/ak_seguros_site/releases/20160901133157/public/assets
+  INFO [e5822110] Finished in 0.267 seconds with exit status 0 (successful).
+ DEBUG [68b67ab5] Running if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133157; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133157'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [68b67ab5] Command: if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133157; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133157'" 1>&2; false; fi
+ DEBUG [68b67ab5] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [dc465306] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do bundle install --path /home/alex/deploy/ak_seguros_site/shared/bundle --without development test --deployment --quiet as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [dc465306] Command: cd /home/alex/deploy/ak_seguros_site/releases/20160901133157 && ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do bundle install --path /home/alex/deploy/ak_seguros_site/shared/bundle --without development test --deployment --quiet
+  INFO [dc465306] Finished in 2.416 seconds with exit status 0 (successful).
+ DEBUG [4db2433c] Running if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133157; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133157'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [4db2433c] Command: if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133157; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133157'" 1>&2; false; fi
+ DEBUG [4db2433c] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO [6db051f1] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do bundle exec rake assets:precompile as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [6db051f1] Command: cd /home/alex/deploy/ak_seguros_site/releases/20160901133157 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do bundle exec rake assets:precompile )
+ DEBUG [6db051f1] 	rake aborted!
+ DEBUG [6db051f1] 	LoadError: cannot load such file -- byebug
+ DEBUG [6db051f1] 	/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/fipe_api-0.3.0/lib/fipe_api.rb:1:in `<top (required)>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:86:in `require'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:86:in `block (2 levels) in require'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:81:in `each'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:81:in `block in require'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:70:in `each'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:70:in `require'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler.rb:102:in `require'
+/home/alex/deploy/ak_seguros_site/releases/20160901133157/config/application.rb:7:in `<top (required)>'
+/home/alex/deploy/ak_seguros_site/releases/20160901133157/Rakefile:4:in `require_relative'
+/home/alex/deploy/ak_seguros_site/releases/20160901133157/Rakefile:4:in `<top (required)>'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `load'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:24:in `run'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli.rb:304:in `exec'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli.rb:11:in `start'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/exe/bundle:27:in `block in <top (required)>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/friendly_errors.rb:98:in `with_friendly_errors'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/exe/bundle:19:in `<top (required)>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/bundle:23:in `load'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/bundle:23:in `<main>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/ruby_executable_hooks:15:in `eval'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [6db051f1] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-01 10:33:54 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [986b4b6f] Running [ -d ~/.rvm ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [986b4b6f] Command: [ -d ~/.rvm ]
+ DEBUG [986b4b6f] Finished in 1.449 seconds with exit status 0 (successful).
+ DEBUG [d3a59e4a] Running ~/.rvm/bin/rvm version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [d3a59e4a] Command: ~/.rvm/bin/rvm version
+ DEBUG [d3a59e4a] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [d3a59e4a] Finished in 1.629 seconds with exit status 0 (successful).
+ DEBUG [1aabd6b1] Running ~/.rvm/bin/rvm current as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [1aabd6b1] Command: ~/.rvm/bin/rvm current
+ DEBUG [1aabd6b1] 	ruby-2.1.1
+ DEBUG [1aabd6b1] Finished in 0.464 seconds with exit status 0 (successful).
+ DEBUG [1dd42c45] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [1dd42c45] Command: ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do ruby --version
+ DEBUG [1dd42c45] 	ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
+ DEBUG [1dd42c45] Finished in 1.043 seconds with exit status 0 (successful).
+  INFO [a06e4c4f] Running /usr/bin/env mkdir -p /tmp as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a06e4c4f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a06e4c4f] Finished in 0.271 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ak_seguros_site-production-alex.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ak_seguros_site-production-alex.sh 100.0%
+  INFO [99d26bd7] Running /usr/bin/env chmod 700 /tmp/git-ssh-ak_seguros_site-production-alex.sh as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [99d26bd7] Command: /usr/bin/env chmod 700 /tmp/git-ssh-ak_seguros_site-production-alex.sh
+  INFO [99d26bd7] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [e6eaea5f] Running /usr/bin/env git ls-remote --heads git@github.com:johnkutzke/ak_seguros_site.git as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e6eaea5f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git ls-remote --heads git@github.com:johnkutzke/ak_seguros_site.git )
+ DEBUG [e6eaea5f] 	35919c3e36822f8e6685786227440b3a33db8b60	refs/heads/master
+  INFO [e6eaea5f] Finished in 0.879 seconds with exit status 0 (successful).
+  INFO [2be9d257] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared /home/alex/deploy/ak_seguros_site/releases as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [2be9d257] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared /home/alex/deploy/ak_seguros_site/releases
+  INFO [2be9d257] Finished in 0.291 seconds with exit status 0 (successful).
+  INFO [591d0d8b] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/shared/public/assets as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [591d0d8b] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/shared/public/assets
+  INFO [591d0d8b] Finished in 0.271 seconds with exit status 0 (successful).
+  INFO [8248cbe3] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/config as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [8248cbe3] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/shared/config
+  INFO [8248cbe3] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [a9545586] Running [ -f /home/alex/deploy/ak_seguros_site/shared/config/database.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a9545586] Command: [ -f /home/alex/deploy/ak_seguros_site/shared/config/database.yml ]
+ DEBUG [a9545586] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [a30be7ce] Running [ -f /home/alex/deploy/ak_seguros_site/shared/config/secrets.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a30be7ce] Command: [ -f /home/alex/deploy/ak_seguros_site/shared/config/secrets.yml ]
+ DEBUG [a30be7ce] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [c4251469] Running [ -f /home/alex/deploy/ak_seguros_site/current/REVISION ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c4251469] Command: [ -f /home/alex/deploy/ak_seguros_site/current/REVISION ]
+ DEBUG [c4251469] Finished in 0.270 seconds with exit status 1 (failed).
+ DEBUG [5fc7fe73] Running [ -f /home/alex/deploy/ak_seguros_site/repo/HEAD ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [5fc7fe73] Command: [ -f /home/alex/deploy/ak_seguros_site/repo/HEAD ]
+ DEBUG [5fc7fe73] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/alex/deploy/ak_seguros_site/repo
+ DEBUG [8ab516f2] Running if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [8ab516f2] Command: if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi
+ DEBUG [8ab516f2] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [3169f3ad] Running /usr/bin/env git remote update --prune as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [3169f3ad] Command: cd /home/alex/deploy/ak_seguros_site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3169f3ad] 	Fetching origin
+  INFO [3169f3ad] Finished in 0.904 seconds with exit status 0 (successful).
+ DEBUG [d59a7c76] Running if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [d59a7c76] Command: if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi
+ DEBUG [d59a7c76] Finished in 0.278 seconds with exit status 0 (successful).
+  INFO [87bd2d5c] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133402 as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [87bd2d5c] Command: cd /home/alex/deploy/ak_seguros_site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133402 )
+  INFO [87bd2d5c] Finished in 0.273 seconds with exit status 0 (successful).
+  INFO [05f47bc5] Running /usr/bin/env git archive master | tar -x -f - -C /home/alex/deploy/ak_seguros_site/releases/20160901133402 as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [05f47bc5] Command: cd /home/alex/deploy/ak_seguros_site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/alex/deploy/ak_seguros_site/releases/20160901133402 )
+  INFO [05f47bc5] Finished in 1.748 seconds with exit status 0 (successful).
+ DEBUG [61620823] Running if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [61620823] Command: if test ! -d /home/alex/deploy/ak_seguros_site/repo; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/repo'" 1>&2; false; fi
+ DEBUG [61620823] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [9b4f74ce] Running /usr/bin/env git rev-list --max-count=1 master as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [9b4f74ce] Command: cd /home/alex/deploy/ak_seguros_site/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ak_seguros_site-production-alex.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9b4f74ce] 	35919c3e36822f8e6685786227440b3a33db8b60
+ DEBUG [9b4f74ce] Finished in 0.274 seconds with exit status 0 (successful).
+ DEBUG [1a4b1e16] Running if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133402; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133402'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [1a4b1e16] Command: if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133402; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133402'" 1>&2; false; fi
+ DEBUG [1a4b1e16] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [62f42e53] Running /usr/bin/env echo "35919c3e36822f8e6685786227440b3a33db8b60" >> REVISION as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [62f42e53] Command: cd /home/alex/deploy/ak_seguros_site/releases/20160901133402 && /usr/bin/env echo "35919c3e36822f8e6685786227440b3a33db8b60" >> REVISION
+  INFO [62f42e53] Finished in 0.272 seconds with exit status 0 (successful).
+  INFO [f777ad2a] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133402/config as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [f777ad2a] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133402/config
+  INFO [f777ad2a] Finished in 0.273 seconds with exit status 0 (successful).
+ DEBUG [6c599a43] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/database.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [6c599a43] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/database.yml ]
+ DEBUG [6c599a43] Finished in 0.267 seconds with exit status 1 (failed).
+ DEBUG [c23d2d5d] Running [ -f /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/database.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c23d2d5d] Command: [ -f /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/database.yml ]
+ DEBUG [c23d2d5d] Finished in 0.266 seconds with exit status 0 (successful).
+  INFO [86f873c7] Running /usr/bin/env rm /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/database.yml as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [86f873c7] Command: /usr/bin/env rm /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/database.yml
+  INFO [86f873c7] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [a645a385] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/config/database.yml /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/database.yml as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a645a385] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/config/database.yml /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/database.yml
+  INFO [a645a385] Finished in 0.273 seconds with exit status 0 (successful).
+ DEBUG [b855c854] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/secrets.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [b855c854] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/secrets.yml ]
+ DEBUG [b855c854] Finished in 0.267 seconds with exit status 1 (failed).
+ DEBUG [2cb98e3f] Running [ -f /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/secrets.yml ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [2cb98e3f] Command: [ -f /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/secrets.yml ]
+ DEBUG [2cb98e3f] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [c307c2da] Running /usr/bin/env rm /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/secrets.yml as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [c307c2da] Command: /usr/bin/env rm /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/secrets.yml
+  INFO [c307c2da] Finished in 0.271 seconds with exit status 0 (successful).
+  INFO [77d4e4fc] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/config/secrets.yml /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/secrets.yml as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [77d4e4fc] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/config/secrets.yml /home/alex/deploy/ak_seguros_site/releases/20160901133402/config/secrets.yml
+  INFO [77d4e4fc] Finished in 0.273 seconds with exit status 0 (successful).
+  INFO [62fad8c8] Running /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133402 /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp /home/alex/deploy/ak_seguros_site/releases/20160901133402/public as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [62fad8c8] Command: /usr/bin/env mkdir -p /home/alex/deploy/ak_seguros_site/releases/20160901133402 /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp /home/alex/deploy/ak_seguros_site/releases/20160901133402/public
+  INFO [62fad8c8] Finished in 0.273 seconds with exit status 0 (successful).
+ DEBUG [18353a44] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/log ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [18353a44] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/log ]
+ DEBUG [18353a44] Finished in 0.269 seconds with exit status 1 (failed).
+ DEBUG [e99bfca7] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/log ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e99bfca7] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/log ]
+ DEBUG [e99bfca7] Finished in 0.283 seconds with exit status 0 (successful).
+  INFO [8a147413] Running /usr/bin/env rm -rf /home/alex/deploy/ak_seguros_site/releases/20160901133402/log as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [8a147413] Command: /usr/bin/env rm -rf /home/alex/deploy/ak_seguros_site/releases/20160901133402/log
+  INFO [8a147413] Finished in 0.276 seconds with exit status 0 (successful).
+  INFO [dcc4632b] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/releases/20160901133402/log as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [dcc4632b] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/log /home/alex/deploy/ak_seguros_site/releases/20160901133402/log
+  INFO [dcc4632b] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [a76a797e] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/pids ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a76a797e] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/pids ]
+ DEBUG [a76a797e] Finished in 0.269 seconds with exit status 1 (failed).
+ DEBUG [e7d2f49f] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/pids ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e7d2f49f] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/pids ]
+ DEBUG [e7d2f49f] Finished in 0.269 seconds with exit status 1 (failed).
+  INFO [4980c862] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/pids as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [4980c862] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/pids /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/pids
+  INFO [4980c862] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [bfacecce] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/cache ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [bfacecce] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/cache ]
+ DEBUG [bfacecce] Finished in 0.264 seconds with exit status 1 (failed).
+ DEBUG [0fd33cbb] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/cache ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [0fd33cbb] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/cache ]
+ DEBUG [0fd33cbb] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [0467c5f1] Running /usr/bin/env rm -rf /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/cache as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [0467c5f1] Command: /usr/bin/env rm -rf /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/cache
+  INFO [0467c5f1] Finished in 0.508 seconds with exit status 0 (successful).
+  INFO [0174e951] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/cache as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [0174e951] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/cache /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/cache
+  INFO [0174e951] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [6102043e] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/sockets ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [6102043e] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/sockets ]
+ DEBUG [6102043e] Finished in 0.267 seconds with exit status 1 (failed).
+ DEBUG [62487f22] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/sockets ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [62487f22] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/sockets ]
+ DEBUG [62487f22] Finished in 0.270 seconds with exit status 1 (failed).
+  INFO [a16ba6b5] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/sockets as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [a16ba6b5] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/tmp/sockets /home/alex/deploy/ak_seguros_site/releases/20160901133402/tmp/sockets
+  INFO [a16ba6b5] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [e2a76227] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/system ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e2a76227] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/system ]
+ DEBUG [e2a76227] Finished in 0.268 seconds with exit status 1 (failed).
+ DEBUG [0e9440c5] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/system ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [0e9440c5] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/system ]
+ DEBUG [0e9440c5] Finished in 0.267 seconds with exit status 1 (failed).
+  INFO [8f7cd471] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/system as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [8f7cd471] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/public/system /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/system
+  INFO [8f7cd471] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [5313d8a6] Running [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/assets ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [5313d8a6] Command: [ -L /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/assets ]
+ DEBUG [5313d8a6] Finished in 0.268 seconds with exit status 1 (failed).
+ DEBUG [231b81b7] Running [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/assets ] as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [231b81b7] Command: [ -d /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/assets ]
+ DEBUG [231b81b7] Finished in 0.268 seconds with exit status 1 (failed).
+  INFO [e4ccd577] Running /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/public/assets /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/assets as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [e4ccd577] Command: /usr/bin/env ln -s /home/alex/deploy/ak_seguros_site/shared/public/assets /home/alex/deploy/ak_seguros_site/releases/20160901133402/public/assets
+  INFO [e4ccd577] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [3a13aec2] Running if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133402; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133402'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [3a13aec2] Command: if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133402; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133402'" 1>&2; false; fi
+ DEBUG [3a13aec2] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [cfa2a950] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do bundle install --path /home/alex/deploy/ak_seguros_site/shared/bundle --without development test --deployment --quiet as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [cfa2a950] Command: cd /home/alex/deploy/ak_seguros_site/releases/20160901133402 && ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do bundle install --path /home/alex/deploy/ak_seguros_site/shared/bundle --without development test --deployment --quiet
+  INFO [cfa2a950] Finished in 1.451 seconds with exit status 0 (successful).
+ DEBUG [cb81af17] Running if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133402; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133402'" 1>&2; false; fi as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [cb81af17] Command: if test ! -d /home/alex/deploy/ak_seguros_site/releases/20160901133402; then echo "Directory does not exist '/home/alex/deploy/ak_seguros_site/releases/20160901133402'" 1>&2; false; fi
+ DEBUG [cb81af17] Finished in 0.266 seconds with exit status 0 (successful).
+  INFO [6bf551b9] Running ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do bundle exec rake assets:precompile as alex@ak-seguros-site.kutzke.com.br
+ DEBUG [6bf551b9] Command: cd /home/alex/deploy/ak_seguros_site/releases/20160901133402 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm 2.2.3@ak-seguros-site do bundle exec rake assets:precompile )
+ DEBUG [6bf551b9] 	rake aborted!
+ DEBUG [6bf551b9] 	LoadError: cannot load such file -- byebug
+ DEBUG [6bf551b9] 	/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `block in require'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:259:in `load_dependency'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/activesupport-5.0.0/lib/active_support/dependencies.rb:293:in `require'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/fipe_api-0.3.0/lib/fipe_api.rb:1:in `<top (required)>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:86:in `require'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:86:in `block (2 levels) in require'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:81:in `each'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:81:in `block in require'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:70:in `each'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/runtime.rb:70:in `require'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler.rb:102:in `require'
+/home/alex/deploy/ak_seguros_site/releases/20160901133402/config/application.rb:7:in `<top (required)>'
+/home/alex/deploy/ak_seguros_site/releases/20160901133402/Rakefile:4:in `require_relative'
+/home/alex/deploy/ak_seguros_site/releases/20160901133402/Rakefile:4:in `<top (required)>'
+/home/alex/deploy/ak_seguros_site/shared/bundle/ruby/2.2.0/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `load'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:24:in `run'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli.rb:304:in `exec'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/cli.rb:11:in `start'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/exe/bundle:27:in `block in <top (required)>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/lib/bundler/friendly_errors.rb:98:in `with_friendly_errors'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/gems/bundler-1.12.5/exe/bundle:19:in `<top (required)>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/bundle:23:in `load'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/bundle:23:in `<main>'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/ruby_executable_hooks:15:in `eval'
+/home/alex/.rvm/gems/ruby-2.2.3@ak-seguros-site/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [6bf551b9] 	(See full trace by running task with --trace)

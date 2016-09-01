@@ -10,7 +10,7 @@ set :repo_url, 'git@github.com:johnkutzke/ak_seguros_site.git'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/alex/deploy/ak_seguros_site'
 
-set :rvm_ruby_version, '2.2.3@ak-seguros-site'
+set :rvm_ruby_version, '2.2.3@ak-seguros'
 
 # Default value for :scm is :git
 # set :scm, :git
